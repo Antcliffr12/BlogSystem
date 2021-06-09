@@ -1,0 +1,12 @@
+﻿@page "{year}/{month}/{key}/{id:int?}"
+@model BlogSystem.Pages.Blog.BlogPageModel
+
+@{
+
+}
+<partial name="_Post" model="Model.Blog"/>
+
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

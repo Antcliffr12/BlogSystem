@@ -1,0 +1,19 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+
+    var data = ViewData["HasPreviousPage"] as Model.Blogs;
+}
+
+
+<div class="container">
+   
+    <ul>
+        @foreach (var blogs in Model.Blog)
+        { 
+            <partial name="_Post" model="blogs" />
+        }
+    </ul>
+   
+</div>

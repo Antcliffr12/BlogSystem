@@ -1,0 +1,13 @@
+﻿@model BlogSystem.Model.Blogs
+@inject BlogSystem.Model.FormattingService Format
+@addTagHelper *, BlogSystem
+
+<article class="blog-post">
+    <h1><a href="/Blog/BlogPage/@Model.Posted.Year/@Model.Posted.Month/@Model.Title/@Model.Id">@Model.Title</a></h1>
+    <div class="details">
+        Posted: <span>@Format.ReadableDate(Model.Posted)</span> by <span>@Model.Author</span>
+    </div>
+    <p>@Model.Body</p>
+
+</article>
+
